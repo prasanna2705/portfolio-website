@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="logo-container">
+      <span class="logo-icon">✨</span>
+      <span class="logo-text">MY PORTFOLIO</span>
+    </div>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero reveal">
+    <h1>Hi, I'm Lakshmi Prasanna 👋</h1>
+    <p id="typing"></p>
+    <div class="hero-actions">
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="PrasannaResume2026.pdf" class="btn btn-outline" download>Download Resume</a>
+</div>
+  </section>
+ 
+  <section id="about" class="about reveal">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a final year Computer Science student at PVPSIT, passionate about web development and problem solving.
+      Currently focusing on MERN stack and Data Structures &amp; Algorithms, aiming to build scalable real-world applications.
+    </p>
+  </section>
+
+  <section id="skills" class="skills reveal">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-groups">
+      <article class="skill-group">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li><i class="fa-solid fa-c"></i> C</li>
+          <li><i class="fa-brands fa-java"></i> Java</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        </ul>
+      </article>
+
+      <article class="skill-group">
+        <h3>Web Development</h3>
+        <ul>
+          <li><i class="fa-brands fa-html5"></i> HTML</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+          <li><i class="fa-brands fa-bootstrap"></i> Bootstrap</li>
+          <!-- <li><i class="fa-solid fa-layer-group"></i> MERN Stack</li> -->
+        </ul>
+      </article>
+
+      <article class="skill-group">
+        <h3>Core CS Subjects</h3>
+        <ul>
+          <li><i class="fa-solid fa-cubes"></i> OOPS</li>
+          <li><i class="fa-solid fa-code-branch"></i> DSA</li>
+          <li><i class="fa-solid fa-network-wired"></i> Computer Networks</li>
+          <li><i class="fa-solid fa-microchip"></i> Operating Systems</li>
+          <li><i class="fa-solid fa-cloud"></i> Cloud Computing</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="stats" class="stats reveal">
+    <h2 class="section-title">Quick Highlights</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3><span class="counter" data-target="150">0</span>+</h3>
+        <p>DSA Problems Solved</p>
+      </div>
+      <div class="stat-card">
+        <h3><span class="counter" id="certCounter" data-target="0">0</span>+</h3>
+        <p>Certificates Earned</p>
+      </div>
+      <div class="stat-card">
+        <h3><span class="counter" data-target="3">0</span></h3>
+        <p>Major Projects Built</p>
+      </div>
+      <div class="stat-card">
+        <h3><span class="counter" id="achievementCounter" data-target="0">0</span>+</h3>
+        <p>Achievements</p>
+      </div>
+    </div>
+  </section>
+ <section id="profiles" class="profiles reveal">
+  <h2 class="section-title">Coding Profiles</h2>
+  <div class="profiles-grid">
+    <a class="profile-card" href="https://leetcode.com/donthuprasanna9" target="_blank">
+      <h3><i class="fa-solid fa-code"></i> LeetCode</h3>
+      <p>Rating: 1555 </p>
+    </a>
+
+    <a class="profile-card" href="https://www.codechef.com/users/donthuprasanna9" target="_blank">
+      <h3><i class="fa-solid fa-trophy"></i> CodeChef</h3>
+      <p>Rating:1200 </p>
+    </a>
+
+    <a class="profile-card" href="https://codeforces.com/profile/donthuprasanna9" target="_blank">
+      <h3><i class="fa-solid fa-bolt"></i> Codeforces</h3>
+      <p>Rating: 909</p>
+    </a>
+  </div>
+</section>
+  <section id="projects" class="projects reveal">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-controls">
+      <input id="projectSearch" type="text" placeholder="Search projects by name or tech..." />
+      <select id="techFilter" aria-label="Filter by technology">
+        <option value="all">All Technologies</option>
+        <option value="mern">MERN</option>
+        <option value="react">React</option>
+        <!-- <option value="node">Node</option> -->
+      </select>
+    </div>
+
+    <div class="projects-container">
+      <article class="project-card" data-tech="mern react node mongodb express">
+        <h3>Aroma Of Emotions</h3>
+        <p class="tech">MERN Stack | MongoDB | Express | React.js | Node.js</p>
+        <p>Canteen Management System built using MERN stack to streamline food ordering and reduce waiting time.</p>
+        <div class="card-actions">
+          <a href="https://mern-project-frontend-olt6.onrender.com/" target="_blank" class="btn">Live Demo</a>
+          <a href="https://github.com/prasanna2705/CanteenManagement" target="_blank" class="btn">View Code</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-tech="mern react node mongodb express">
+        <h3>Internsync Smart Match</h3>
+        <p class="tech">MERN Stack | MongoDB | Express | React.js | Node.js</p>
+        <p>Smart internship matching platform that recommends opportunities based on user skills using intelligent filtering.</p>
+        <div class="card-actions">
+          <a href="https://intern-sync-smart-match.vercel.app/" target="_blank" class="btn">Live Demo</a>
+          <a href="https://github.com/prasanna2705/Internsync-SmartMatch" target="_blank" class="btn">View Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="achievements" class="achievements reveal">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements-grid">
+      <div class="card achievement-item achievement-card">
+        <h3>🏁 AWS ImpactX Challenge Finalist</h3>
+        <p>Finalist at AWS ImpactX Challenge held at IIT Bombay, Mumbai.</p>
+      </div>
+      <div class="card achievement-item achievement-card">
+        <h3>🥇 NPTEL Top 2% Nationwide</h3>
+        <p>Secured Top 2% nationwide in NPTEL Fundamentals of Artificial Intelligence.</p>
+      </div>
+      <div class="card achievement-item achievement-card more-item hidden-item">
+        <h3>💡 Smart India Hackathon Selection</h3>
+        <p>Selected for Smart India Hackathon (SIH), College Round participant.</p>
+      </div>
+      <div class="card achievement-item achievement-card more-item hidden-item">
+        <h3>🛩️ Rolls-Royce Wings4Her Scholar</h3>
+        <p>Awarded Rolls-Royce Wings4Her Scholarship for academic excellence.</p>
+      </div>
+      <div class="card achievement-item achievement-card more-item hidden-item">
+        <h3>🏆 CodeChef Diamond Badge</h3>
+        <p>Achieved Diamond Badge on CodeChef for a consistent problem-solving streak.</p>
+      </div>
+    </div>
+    <button class="toggle-more-btn" id="toggleAchievementsBtn" type="button">Show More Achievements</button>
+  </section>
+
+  <section id="certifications" class="certifications reveal">
+    <h2 class="section-title">Certifications</h2>
+    <div class="achievements-grid certifications-grid" id="certificationsGrid">
+      <div class="card cert-item cert-card">
+        <h3>📜 Frontend Development and ML Foundations</h3>
+        <p>Infosys Springboard certification in Frontend Development and Machine Learning Foundations.</p>
+      </div>
+      <div class="card cert-item cert-card">
+        <h3>📜 Programming with Java and AI Fundamentals</h3>
+        <p>NPTEL certifications: Programming with Java (IIT Kharagpur) and Fundamentals of Artificial Intelligence (IIT Guwahati).</p>
+      </div>
+      <div class="card cert-item cert-card more-item hidden-item">
+        <h3>📜 Computer Science 101 (CSX0001)</h3>
+        <p>Stanford University Computer Science 101 certification.</p>
+      </div>
+      <div class="card cert-item cert-card more-item hidden-item">
+        <h3>📜 Virtual Internship in Networking</h3>
+        <p>Completed Virtual Internship Program in Networking by Cisco.</p>
+      </div>
+    </div>
+    <button class="toggle-more-btn" id="toggleCertificationsBtn" type="button">Show More Certifications</button>
+  </section>
+
+  <section id="contact" class="contact reveal">
+    <h2 class="section-title">Contact</h2>
+    <form action="https://formspree.io/f/xkokjpwb" method="POST">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Enter your Name" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" required />
+
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" name="subject" placeholder="Regarding a project, collaboration, etc." />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message here..." rows="6" required></textarea>
+
+      <button id="submitBtn" type="submit">Send Message</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://github.com/prasanna2705" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/lakshmi-prasanna-donthu" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
+
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="Scripts.js"></script>
+</body>
+</html>
